@@ -27,4 +27,3 @@ networks:
   kasm_network:
     name: proxy_swag_network
       external: true
-    
