@@ -19,10 +19,10 @@ services:
       - 3000:3000
       - 4443:4443
     restart: unless-stopped
-  networks:
-    kasm_network:
-      aliases:
-        - kasm
+    networks:
+      kasm_network:
+        aliases:
+          - kasm
 networks:
   kasm_network:
     name: proxy_swag_network
