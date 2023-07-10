@@ -11,20 +11,20 @@ services:
       - DOCKER_HUB_PASSWORD=PASS #optional
       - DOCKER_MTU=1500 #optional
     volumes:
-      - /path/to/data:/opt
-      - /path/to/profiles:/profiles #optional
+      - ./kasm/data:/opt
+      - ./kasm/profiles:/profiles #optional
       - /dev/input:/dev/input #optional
       - /run/udev/data:/run/udev/data #optional
     ports:
       - 3000:3000
       - 4443:4443
     restart: unless-stopped
-networks:
-            kasm_network:
-                aliases:
-                    - kasm
-networks:
+  networks:
     kasm_network:
-        name: proxy_swag_network
-        external: true
+      aliases:
+        - kasm
+networks:
+  kasm_network:
+    name: proxy_swag_network
+      external: true
     
